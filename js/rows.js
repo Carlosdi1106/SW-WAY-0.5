@@ -81,8 +81,7 @@ let setupRows = function (game) {
         else if(theKey=='birthDate')
         {
             let edadPropuesta=getAge(theValue);
-            let edadJugador=getAge(jugadorMisterioso);
-    
+            let edadJugador=getAge(jugadorMisterioso.birthdate);
             if (edadPropuesta==edadJugador)
             {
                 res=edadPropuesta;
