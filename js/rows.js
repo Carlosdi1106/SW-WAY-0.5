@@ -85,15 +85,15 @@ let setupRows = function (game) {
     
             if (edadPropuesta==edadJugador)
             {
-                res=theValue;
+                res=edadPropuesta;
             }
             else if(edadJugador>edadPropuesta)
             {
-                res=theValue+higher;
+                res=edadPropuesta+higher;
             }
             else
             {
-                res=theValue+lower;
+                res=edadPropuesta+lower;
             }
             
     
@@ -155,7 +155,7 @@ let setupRows = function (game) {
             `<img src="https://playfootball.games/media/competitions/${leagueToFlag(guess.leagueId)}.png" alt="" style="width: 60%;">`,
             `<img src="https://cdn.sportmonks.com/images/soccer/teams/${guess.teamId % 32}/${guess.teamId}.png" alt="" style="width: 60%;">`,
             `${guess.position}`,
-            `${check('birthDate',getAge(guess.birthdate))}` /* YOUR CODE HERE */
+            `${check('birthDate',guess.birthdate)}`
         ]
     }
 
